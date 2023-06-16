@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
+    <title>Login</title>
+</head>
+
+<body>
+
+    <div class="logsigdiv">
+        <img src="{% static 'images/website/login.png' %}" class="logsigimg">
+
+        {% if error %}
+            <h4 color="#ff0011" id="logerror">{{ error }}!!</h4>
+        {% endif %}
+
+        <form method="POST" action="">
+            {% csrf_token %}
+
+            <span for="usernamefield">Username</span><br/><br/>
+            <input type="text" name="username" id="usernamefield"/><br/><br/><br/>
+
+            <span for="passwordfield">Password</span><br/><br/>
+            <input type="password" name="password" id="passwordfield"/><br/><br/><br/>
+
+
+            <input type="submit" value="submit"/>
+        </form>
+
+        <a href="{% url 'website:index' %}">Index</a> <a href="{% url 'website:signup' %}">Sign up</a>
+
+    </div>
+
+</body>
+</html>

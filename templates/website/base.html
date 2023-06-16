@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+{% load static %}
+
+
+<html>
+	<head>
+		<meta charset='utf-8'>
+
+		<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+		<title>
+			{% block titlepage %}
+			{% endblock %}
+		</title>
+	</head>
+
+	<body>
+		<header>
+			<a href="{% url 'website:index' %}"><h2 class="b_item">BookStore</h2></a>
+
+			<div id="divsearch">
+                <form method='POST' action="{% url 'website:results' %}" class="b_item">
+                    {% csrf_token %}
+                    <button type="submit" class="btnheader"><i class="fa fa-search"></i></button>
+                    <input type='text' placeholder='Search' class="s_form" name="search">
+                </form>
+            </div>
+
+			{% if user.is_authenticated %}
+				<span style="font-weight:bold;">Hello {{ user.username }}</span>
+				<a href="{% url 'website:logout' %}">Logout</a>
+			{% endif %}
+
+			<span id="productsnumber">0</span>
+			<a href=""><img src="{% static 'images/website/cart.png' %}" class="h_icon b_item"></a>
+			<a href="{% url 'website:login' %}"><img src="{% static 'images/website/login.png' %}" class="h_icon b_item"></a>
+
+
+			<nav>
+				<a href="">Offers</a>
+				<a href="{% url 'website:mostsellers' %}">The most seller</a>
+				<a href="{% url 'website:forkids' %}">For kids</a>
+				<a href="{% url 'website:foradults' %}">For adults</a>
+			</nav>
+		</header>
+
+		<div id="container">
+			{% block sbjct_container %}
+			{% endblock %}
+		</div>
+
+
+		<footer>
+			<h3>BookStore. All rights reserverd</h3>
+		</footer>
+
+	</body>
+</html>

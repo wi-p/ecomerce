@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% extends 'website/base.html' %}
+{% load static %}
+
+{% block sbjct_container %}
+        <div class="bk_info">
+                <img src="{{ MEDIA_URL }}{{ book.photo }}" id="bkphoto"/>
+        </div>
+
+        <div class="bk_info bk_info2">
+                <h2>{{ book.title }}</h2>
+
+                {% if user.is_authenticated %}
+                        <a href="{{ MEDIA_URL }}{{ book.file }}" download><button>Download</button></a><br/>
+                {% else %}
+                        <h4>Login to download books.</h4>
+                {% endif %}
+
+                Price: $${{ book.price }}<br/>
+                Writter:{{ book.writter }}<br/>
+                Publisher: {{ book.publisher }}<br/>
+                Date of publication: {{ book.publication_date }}<br/>
+                Genre: {{ book.genre }}<br/>
+                Number of downloads: {{ book.download_number }}<br/>
+                Age: {{ book.age }}<br/>
+                Description: {{ book.description }}<br/>
+        </div>
+{% endblock %}
+

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% extends 'website/base.html' %}
+{% load static %}
+
+{% block titlepage %}
+    For adults
+{% endblock %}
+
+{% block sbjct_container %}
+    <h2 class="titlepage">For adults</h2>
+
+    <div class="books">
+        {% for nb in books %}
+            <div class="displaybook">
+              <a href="{% url 'website:book' nb.isbn %}"><img src="{{ MEDIA_URL }}{{ nb.photo }}" class="bookimage" /></a>
+
+               <h3 class="booktitle">{{ nb.title }}</h3>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

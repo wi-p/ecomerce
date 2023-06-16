@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+{% extends 'website/base.html' %}
+{% load static %}
+
+{% block sbjct_container %}
+     <div class="books">
+        {% for nb in newbooks %}
+            <div class="displaybook">
+              <a href="{% url 'website:book' nb.isbn %}"><img src="{{ MEDIA_URL }}{{ nb.photo }}" class="bookimage" /></a>
+
+               <h3 class="booktitle">{{ nb.title }}</h3>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

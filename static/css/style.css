@@ -1,0 +1,232 @@
+/* Body elements */
+
+body{
+    margin:0;
+}
+
+/* Header elements */
+
+header{
+	height:8em;
+	background-color:#ff96a7;
+	border-bottom:0.3em solid #dadee6;
+}
+
+header .h_icon{
+	height:2.5em;
+	width:2.5em;
+	margin-right:1em;
+	float:right;
+}
+
+header .b_item{
+	display:inline;
+}
+
+header h2{
+	margin-right:10em;
+	margin-left:1em;
+	font-size:25pt;
+}
+
+header a:link, a:visited{
+    text-decoration:none;
+    color:#ffffff;
+}
+
+.s_form{
+	width:20em;
+	height:2em;
+	margin-right:20em;
+}
+
+header nav{
+    display:inline-block;
+	margin-top:3em;
+	margin-left:8em;
+}
+
+header nav a{
+	margin-right:14em;
+	display:inline-block;
+}
+
+#divsearch{
+    display:inline-block;
+}
+
+.btnheader{
+    background-color:#ffd04e00;
+    border:0;
+    font-size:1.5em;
+    color:#ffffff;
+}
+
+#productsnumber{
+    background-color:#ff4245;
+    color:#fcfafa;
+    font-weight:bold;
+    font-size:15pt;
+    padding:0.3em;
+    margin-right:0.5em;
+    float:right;
+}
+
+/* --- Subject container --- */
+
+#container{
+	display:inline-block;
+	margin: 2em 0.5em 5em 0.5em;
+}
+#container p{
+	font-size:18pt;
+	font-family:Times New Roman;
+	word-spacing:0.9;
+}
+
+.c_items{
+	height:15em;
+	background-color:#edd1eb;
+}
+
+.c_title{
+	margin-left:3em;
+}
+
+.books{
+    margin-left:3.5em;
+    margin-right:3em;
+}
+
+.displaybook{
+    display:inline-block;
+    width:13em;
+    height:17em;
+    border: 0.15em solid #bacdd8;
+    border-radius:1em;
+    margin-left:0.8em;
+    margin-right:0.8em;
+    margin-bottom:1.5em;
+}
+
+.booktitle{
+    text-align:center;
+}
+
+.bookimage{
+    height:13em;
+    width:10em;
+    margin: 1em 1em 0 1.4em;
+    border:0.1em solid black;
+}
+
+.bksearch{
+    height:9em;
+    margin:2em 0em 1em 0em;
+}
+
+.bksearch img{
+    display:inline-block;
+    height:9em;
+    width:7em;
+    vertical-align:middle;
+    padding:0.4em;
+    border: 0.15em solid #bacdd8;
+    border-radius:1em;
+}
+
+.bksearch h3{
+    display:inline-block;
+    margin-left:1em;
+}
+
+.titlepage{
+    text-align:center;
+}
+
+.logsigdiv{
+    width:30em;
+    height:32em;
+    margin: 5% 20% 0% 30%;
+    border: 0.3em solid #ebeae8;
+    border-radius:0.5em;
+    text-align:center;
+}
+
+#logerror{
+    color:#ff0000;
+}
+
+.logsigimg{
+    width:8em;
+    height:8em;
+    display:block;
+    margin-left:35%;
+    margin-top:5%;
+}
+
+.logsigdiv form{
+    margin-top:10%;
+    margin-bottom:8%;
+}
+
+.logsigdiv a{
+    margin-left:5%;
+    color:#0500ff;
+}
+
+#errormessage{
+    color:#fc1303;
+    font-weight:bold;
+}
+
+/* --- Results Page --- */
+
+#filter{
+    display:inline-block;
+    position:fixed;
+    top:10;em
+    width:15em;
+    border: 0.15em solid black;
+    border-radius:0.8em;
+    padding:1em;
+    margin-right:5em;
+}
+
+#results{
+    display:inline-block;
+    margin-left:15em;
+}
+
+#results h2{
+    text-align:center;
+}
+
+#bkphoto{
+    width:20em;
+    height:30em;
+    border:1px solid #170201;
+}
+
+.bk_info{
+    display:inline-block;
+    margin-right:2em;
+    vertical-align:top;
+    line-height:2.5;
+}
+
+.bk_info2{
+    width:40em;
+}
+
+/* --- Footer --- */
+
+footer{
+    position:relative;
+    bottom: -120px;
+    width:100%;
+}
+
+footer h3{
+    text-align:center;
+}
